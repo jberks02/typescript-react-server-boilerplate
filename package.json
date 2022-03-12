@@ -7,10 +7,11 @@
     "test": "jest --collectiveCoverage",
     "dev-server": "concurrently \"tsc -w\" \"nodemon -w .env -r dotenv/config target/index.js\"",
     "clean": "rimraf target",
-    "build": "tsc",
+    "build-server": "tsc",
+    "build-react": "webpack",
     "postbuild": "copyfiles -E package.json package-lock.json target",
     "dev-react": "webpack serve --mode development", 
-    "typegen": "kea-typegen write ./web"
+    "typegen": "kea-typegen write ./web/components/Counter/counterLogic.ts"
   },
   "repository": {
     "type": "git",
